@@ -5,7 +5,7 @@ class ProductDetailPage {
   }
   async getProductData(id) {
     try {
-      const res = await fetch(`http://35.76.53.28:8080/mall/${id}`, {
+      const res = await fetch(`https://test.api.weniv.co.kr/mall/${id}`, {
         method: 'GET',
       });
       const json = await res.json();
