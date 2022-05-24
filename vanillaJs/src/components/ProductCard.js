@@ -7,7 +7,7 @@ class ProductCard {
   render() {
     const productContainer = document.createElement('li');
     const productLink = document.createElement('a');
-    productLink.href = `/detail/${this.item.id}`;
+    productLink.href = `/vanillaJs/detail/${this.item.id}`;
     productLink.setAttribute('class', 'proudt-item"');
 
     const productName = new ProductName(this.item.productName);
@@ -15,8 +15,8 @@ class ProductCard {
     const productPrice = new ProductPrice(this.item.price);
     
     productContainer.appendChild(productLink);
-    productLink.appendChild(productName.render());
     productLink.appendChild(productImg.render());
+    productLink.appendChild(productName.render());
     productLink.appendChild(productPrice.render());
 
     return productContainer;

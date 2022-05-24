@@ -4,7 +4,7 @@ class ProductImg {
   }
   render() {
     const productImgContainer = document.createElement('div');
-    productImgContainer.setAttribute('class', 'proudt-img"');
+    productImgContainer.classList.add('product-img');
 
     const productImg = document.createElement('img');
     productImg.setAttribute('src', `https://test.api.weniv.co.kr/${this.src} `);

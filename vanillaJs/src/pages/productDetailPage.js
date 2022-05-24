@@ -4,16 +4,17 @@ class ProductDetailPage {
     this.product = {};
   }
   async getProductData(id) {
-    try {
-      const res = await fetch(`https://test.api.weniv.co.kr/mall/${id}`, {
-        method: 'GET',
-      });
-      const json = await res.json();
-      this.product = json;
-      console.log(this.product);
-    } catch (e) {
-      console.log(e);
-    }
+    console.log(id)
+    // try {
+    //   const res = await fetch(`https://test.api.weniv.co.kr/mall/${id}`, {
+    //     method: 'GET',
+    //   });
+    //   const json = await res.json();
+    //   this.product = json;
+    //   console.log(this.product);
+    // } catch (e) {
+    //   console.log(e);
+    // }
   }
   render() {
     console.log(this.id);
