@@ -1,8 +1,10 @@
 import ProductCard from '../components/ProductCard.js';
+import Header from '../components/common/hearder.js';
+import Footer from '../components/common/footer/footer.js';
 class ProductPage { 
   constructor() { 
     this.product = {};
-    this.main = document.createElement("main");
+    this.main = document.createElement('main')
   }
 
   async getProductData() {
@@ -20,8 +22,13 @@ class ProductPage {
 
   async setProductData() { 
     await this.getProductData()
-
+    
+    const header = new Header();
+    const footer = new Footer();
     this.main.classList.add("product");
+
+    this.main.before(header.render());
+    this.main.after(footer.render())
 
     const productHeader = document.createElement('h1');
     productHeader.classList.add('ir');
@@ -41,6 +48,7 @@ class ProductPage {
 
   render() {
     this.setProductData();
+   
     return this.main;
   }
 }
