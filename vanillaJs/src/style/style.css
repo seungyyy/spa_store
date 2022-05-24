@@ -138,17 +138,20 @@ header nav {
 }
 
 header nav .header-container {
-  display: flex;
-  align-items: center;
-  padding: 1rem ;
+  position: relative;
+  padding: 1.5rem 1rem 1.2rem;
+  box-sizing: border-box;
 }
 
-.link-logo-box img{
+.link-logo-box {
   width: 124px;
 }
 
 header nav .header-container .li-inp {
-  margin-left: 5vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 header nav .header-container .li-inp input {
@@ -158,5 +161,77 @@ header nav .header-container .li-inp input {
   border-radius: 50px;
   padding: 0 13px;
   box-sizing: border-box;
-  background: url('/assets/icon-search.svg') no-repeat right 22px center / 28px 28px;
+  background: url('../../assets/icon-search.svg') no-repeat right 22px center / 28px 28px;
+}
+
+/* footer */
+footer {
+  padding: 5.55vh 16.66vw 5.8vh;
+  background-color: #f2f2f2;
+  font-size: 14px;
+}
+
+footer .footer-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .footer-list .left-list {
+  display: flex;
+}
+
+footer .footer-list .left-list li a:not(.lastli){
+  margin-right: 14px;
+  padding-right: 14px;
+  background: url('../../assets/bg-black-line.png') no-repeat right center / 2px 14px;
+}
+
+footer .footer-list .right-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-list .instaLink, 
+.right-list .fbLink, 
+.right-list .ytLink {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+.right-list .instaLink {
+  background: url('../../assets/icon-insta.svg') no-repeat center / 32px 32px;
+}
+
+.right-list .fbLink {
+  margin: 0 14px;
+  background: url('../../assets/icon-fb.svg') no-repeat center / 32px 32px;
+}
+
+.right-list .ytLink {
+  background: url('../../assets/icon-yt.svg') no-repeat center / 32px 32px;
+}
+
+footer hr {
+  margin: 1.875rem 0;
+  background-color: #c4c4c4;
+}
+
+footer dl {
+  color: #767676;
+}
+
+footer .dt-float-left,
+footer .dd-float-left {
+  float: left;
+}
+
+footer strong {
+  font-weight: 500;
+  line-height: 2;
+} 
+
+footer dt, footer dd {
+  line-height: 1.2;
 }

@@ -10,14 +10,23 @@ class FooterLeftList {
     ];
     const ul = document.createElement('ul')
 
+    ul.classList.add('left-list')
+
     arr.forEach((it) => {
       const li = document.createElement('li');
       const a = document.createElement('a');
-      a.setAttribute('href', '#');
+      a.setAttribute('href', 'javascript:void(0);');
       a.textContent = it;
+
+      if (a.textContent === '제휴문의') {
+        a.classList.add('lastli');
+      }
+
       li.appendChild(a);
       ul.appendChild(li);
     });
+
+   
     return ul;
   }
 }

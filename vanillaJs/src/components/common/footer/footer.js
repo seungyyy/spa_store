@@ -10,6 +10,8 @@ class Footer {
     const leftList = new FooterLeftList;
     const rightList = new FooterRightList;
     const dl = new Footerdl;
+    
+    div.classList.add('footer-list')
 
     div.appendChild(leftList.render());
     div.appendChild(rightList.render());

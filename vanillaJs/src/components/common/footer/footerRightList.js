@@ -6,7 +6,7 @@ class FooterRightList {
         'ytLink',
       ];
       const ul = document.createElement('ul');
-
+      ul.classList.add('right-list')
       arr.forEach((it) => {
         const li = document.createElement('li');
         const a = document.createElement('a');
