@@ -9,9 +9,14 @@ export default class App {
   setup() {
     const { el } = this.props;
 
+    fetch(window.location).then(res => { 
+      if (res.status === 404) { 
+        console.log('ddd')
+      }
+    })
+
     const router = new Router({
       '/vanillaJs/': ProductPage,
-      '/vanillaJs/detail': ProductDetailPage,
       '/vanillaJs/detail/:id': ProductDetailPage,
       '/vanillaJs/cart': CartPage,
     });

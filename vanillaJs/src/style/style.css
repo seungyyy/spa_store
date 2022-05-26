@@ -130,6 +130,7 @@ header nav {
   left: 0;
   z-index: 10;
   background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.05) 1.95px 1.95px 2.6px;
 }
 
 header nav .header-container {
@@ -157,6 +158,18 @@ header nav .header-container .li-inp input {
   padding: 0 13px;
   box-sizing: border-box;
   background: url('../../assets/icon-search.svg') no-repeat right 22px center / 28px 28px;
+}
+
+header nav .header-container .cart-page {
+  position: absolute;
+  display: inline-block;
+  right: 5%;
+  top: 25%;
+  transform: translateX(-50%);
+  width: 45px;
+  height: 45px;
+  background: url('../../assets/cart-btn.svg') no-repeat center / 45px 45px;
+  cursor: pointer;
 }
 
 /* footer */

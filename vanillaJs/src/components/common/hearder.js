@@ -1,26 +1,35 @@
 class Header {
-  render() {
-    const header = document.createElement('header');
+  constructor(header) { 
+    this.header = document.createElement('header');
+
+  }
+  
+  headerInner() { 
     const nav = document.createElement('nav');
     const div = document.createElement('div');
-   
-    header.appendChild(nav);
+    this.header.appendChild(nav);
     nav.appendChild(div);
-    div.classList.add('header-container')
+    div.classList.add('header-container');
 
     div.innerHTML = `
-      <a href="/vanillaJs">
+      <a href="/vanillaJs/">
         <div class="link-logo-box">
-          <Image src='assets/logo-hodu.png' alt="logo" />
+          <Image src=/vanillaJs/assets/logo-hodu.png alt="logo" />
         </div>
       </a>
       <div class="li-inp">
         <label htmlFor="search-inp"></label>
         <input type="text" name="search-inp" placeholder="상품을 검색해보세요!" />
       </div>
-    `; 
+      <a href="/vanillaJs/cart" class="cart-page"></a>
+    `;
+  }  
 
-    return header;
+
+  render() {
+    this.headerInner();
+
+    return this.header;
   }
 }
 

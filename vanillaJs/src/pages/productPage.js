@@ -14,7 +14,6 @@ class ProductPage {
       });
       const res = await data.json();
       this.product = res;
-      console.log(this.product);
     } catch (e) {
       console.log(e);
     }
